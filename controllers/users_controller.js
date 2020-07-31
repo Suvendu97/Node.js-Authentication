@@ -13,11 +13,12 @@ module.exports.profile = function(req, res){
 
 
 module.exports.update = function(req, res){
+    
     if (req.body.password != req.body.confirm_password){
         req.flash('error', 'Passwords do not match');
         return res.redirect('back');
     }
-    
+
     if(req.user.id == req.params.id){
         User.findByIdAndUpdate(req.params.id, req.body, function(err, user){
             req.flash('success', 'Password Changed Successfully!');
@@ -38,7 +39,7 @@ module.exports.signUp = function(req, res){
 
 
     return res.render('user_sign_up', {
-        title: "Codeial | Sign Up"
+        title: " Sign Up"
     })
 }
 
@@ -50,7 +51,7 @@ module.exports.signIn = function(req, res){
         return res.redirect('/users/profile');
     }
     return res.render('user_sign_in', {
-        title: "Codeial | Sign In"
+        title: " Sign In"
     })
 }
 
