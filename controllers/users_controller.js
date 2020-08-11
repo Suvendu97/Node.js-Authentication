@@ -13,6 +13,14 @@ module.exports.profile = function(req, res){
 
 
 module.exports.update = function(req, res){
+    // console.log(req.body);
+    // console.log(req.user.password);
+    
+    if(req.body.oldPassword != req.user.password)
+    {
+        req.flash('error', 'Wrong Password');
+        return res.redirect('back');
+    }
     
     if (req.body.password != req.body.confirm_password){
         req.flash('error', 'Passwords do not match');

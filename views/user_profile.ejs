@@ -1,13 +1,25 @@
 <link rel="stylesheet" href="/css/users.css">
-<h1> Users Profile page </h1>
 
-<% if(user.id == profile_user.id) { %>
-    <!-- if user matches then show the form -->
-    <h4>want to change password?</h4>
-    <form action="/users/update/<%= profile_user.id %>" method="POST">
-        <input type="password" name="password" placeholder="New Password" required>
-            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
-        <input type="submit" value="Change Password">
-    </form>
+<div id="container">
 
-<% } %>
+    <h1> Hey <%=user.name %> Welcome, I'm BatMan </h1> <br><br>
+
+    <div id="change-password-form">
+        <% if(user.id == profile_user.id) { %>
+            <!-- if user matches then show the form -->
+            <h3>want to change password?</h3>
+            <form action="/users/update/<%= profile_user.id %>" method="POST">
+                <p>Old Password</p>
+                <input type="password" name="oldPassword" placeholder="Old Password" required> 
+                <p>New Password</p>
+                <input type="password" name="password" placeholder="New Password" required>
+                <p> Confirm New Password</p>
+                <input type="password" name="confirm_password" placeholder="Confirm New Password" required> <br><br>
+                <input id="submit" type="submit" value="Change Password">
+            </form>
+    
+        <% } %>
+    </div>
+
+
+</div>
