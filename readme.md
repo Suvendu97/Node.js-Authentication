@@ -3,7 +3,7 @@
 
   
 
-## Description: *Its my social web app.*
+## Description: *a complete authentication system which can be used as a starter code for creating any new application.*
 
   
 
@@ -18,10 +18,16 @@ MongoDB
 Robo3T*
 
 ## Features:
-*3 types of Authentication
-user profile page
-home page
-change password*
+
+- 3 types of Authentication
+- user profile page
+- home page
+- Sign up with email
+- Sign in
+- Sign out
+- Change password after sign in
+- Google login/signup
+- show notification when a user log-in/out, change password
 
   
 

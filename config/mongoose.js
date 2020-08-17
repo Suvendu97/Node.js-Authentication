@@ -1,5 +1,7 @@
+// requiring DB
 const mongoose = require('mongoose');
 
+// connect to my DB named as nodejs_Authentication
 mongoose.connect('mongodb://localhost/nodejs_Authentication');
 
 const db = mongoose.connection;
