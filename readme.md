@@ -9,13 +9,19 @@
 
 ## Technologies:
 
-*HTML
+HTML
+
 CSS/SCSS
+
 Node.js
+
 Express.js
+
 Passport.js 
+
 MongoDB
-Robo3T*
+
+Robo3T
 
 ## Features:
 
@@ -90,3 +96,6 @@ npm install "package-name"
 - setup scss
 - setup sassMiddleware
 - create function to change password for authenticated users
+
+## Link for video explanation of how it works
+`https://www.youtube.com/watch?v=j-fTU4_Og4M&t=106s&ab_channel=suvendupolley`
